@@ -1,0 +1,179 @@
+{
+    "id": "c7EFZ7GC",
+    "type": "quiz",
+    "title": "My typeform",
+    "workspace": {
+        "href": "https://api.typeform.com/workspaces/LYxX3d"
+    },
+    "theme": {
+        "href": "https://api.typeform.com/themes/oZsMBmgc"
+    },
+    "settings": {
+        "language": "en",
+        "progress_bar": "proportion",
+        "meta": {
+            "allow_indexing": false
+        },
+        "hide_navigation": false,
+        "is_public": true,
+        "is_trial": false,
+        "show_progress_bar": true,
+        "show_typeform_branding": true,
+        "are_uploads_public": false,
+        "show_time_to_complete": true,
+        "show_number_of_submissions": false,
+        "show_cookie_consent": false,
+        "show_question_number": true,
+        "pro_subdomain_enabled": false,
+        "capabilities": {
+            "e2e_encryption": {
+                "enabled": false,
+                "modifiable": false
+            }
+        }
+    },
+    "thankyou_screens": [
+        {
+            "id": "DefaultTyScreen",
+            "ref": "default_tys",
+            "title": "Thanks for completing this typeform\nNow *create your own* — it's free, easy, & beautiful",
+            "type": "thankyou_screen",
+            "properties": {
+                "show_button": true,
+                "share_icons": false,
+                "button_mode": "default_redirect",
+                "button_text": "Create a *typeform*"
+            },
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/2dpnUBBkz2VN"
+            }
+        }
+    ],
+    "fields": [
+        {
+            "id": "nKfYTvBq4961",
+            "title": "What is your email?",
+            "ref": "60b0d0a3-9ce7-4c02-8719-3b7bc4d834f1",
+            "properties": {},
+            "validations": {
+                "required": false
+            },
+            "type": "email"
+        },
+        {
+            "id": "73jRKfSvTS2t",
+            "title": "It looks like you are already registered.  Sorry only one registration per email address.",
+            "ref": "66fafb0c-5e27-4fdf-8830-ef8cfa827cc0",
+            "properties": {
+                "button_text": "Continue",
+                "hide_marks": false
+            },
+            "type": "statement"
+        },
+        {
+            "id": "ymIlbdy3OTaF",
+            "title": "Who's your daddy",
+            "ref": "6ce5cbf2-8457-4f18-af9a-a7dcd28e2e3b",
+            "properties": {},
+            "validations": {
+                "required": true
+            },
+            "type": "short_text"
+        },
+        {
+            "id": "O7D4Y2vFfthf",
+            "title": "Done! Thanks for your email",
+            "ref": "2ff86500-07ea-4cf9-814f-ab26bf67e68e",
+            "properties": {
+                "button_text": "Continue",
+                "hide_marks": false
+            },
+            "type": "statement"
+        }
+    ],
+    "logic": [
+        {
+            "type": "field",
+            "ref": "60b0d0a3-9ce7-4c02-8719-3b7bc4d834f1",
+            "actions": [
+                {
+                    "action": "jump",
+                    "details": {
+                        "to": {
+                            "type": "field",
+                            "value": "66fafb0c-5e27-4fdf-8830-ef8cfa827cc0"
+                        }
+                    },
+                    "condition": {
+                        "op": "equal",
+                        "vars": [
+                            {
+                                "type": "field",
+                                "value": "60b0d0a3-9ce7-4c02-8719-3b7bc4d834f1"
+                            },
+                            {
+                                "type": "constant",
+                                "value": "test@test.co"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "action": "jump",
+                    "details": {
+                        "to": {
+                            "type": "field",
+                            "value": "6ce5cbf2-8457-4f18-af9a-a7dcd28e2e3b"
+                        }
+                    },
+                    "condition": {
+                        "op": "always",
+                        "vars": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "field",
+            "ref": "66fafb0c-5e27-4fdf-8830-ef8cfa827cc0",
+            "actions": [
+                {
+                    "action": "jump",
+                    "details": {
+                        "to": {
+                            "type": "field",
+                            "value": "60b0d0a3-9ce7-4c02-8719-3b7bc4d834f1"
+                        }
+                    },
+                    "condition": {
+                        "op": "always",
+                        "vars": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "field",
+            "ref": "6ce5cbf2-8457-4f18-af9a-a7dcd28e2e3b",
+            "actions": [
+                {
+                    "action": "jump",
+                    "details": {
+                        "to": {
+                            "type": "field",
+                            "value": "2ff86500-07ea-4cf9-814f-ab26bf67e68e"
+                        }
+                    },
+                    "condition": {
+                        "op": "always",
+                        "vars": []
+                    }
+                }
+            ]
+        }
+    ],
+    "_links": {
+        "display": "https://ethdenver.typeform.com/to/c7EFZ7GC"
+    }
+}
